@@ -1,0 +1,27 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] At least one other instance of the launcher is running. Will wait until they all finish
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Service running in Emulator Mode, will not wait/kill other instances of the launcher
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Emulator config file set to C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] DiagnosticsStoreRootPath set to: C:\Users\Kensei\AppData\Local\dftmp\Resources\76e7cf02-f555-4eca-93ee-e37ffd0edb6e
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Loading config file: C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Config file to read: C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Emulator config file set to C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:51 AM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Found a MonAgentHost.exe. WadArguments: "C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WebRole1\plugins\Diagnostics\Monitor\x64\MonAgentHost.exe" -LocalPath "C:\Users\Kensei\AppData\Local\dftmp\Resources\8e226d53-4282-437c-8892-f2ce05827b6f\WAD0105"  -ConfigFile "C:\Users\Kensei\AppData\Local\dftmp\Resources\8e226d53-4282-437c-8892-f2ce05827b6f\WAD0105\Configuration\MaConfig.xml" -ShutDownEvent WADDM-ShutDown-b4cf233ddcfa434499d3a0fa920615ca  -TotalShutDownEvent WADDM-TotalShutDown-b4cf233ddcfa434499d3a0fa920615ca -InitializedEvent WADM-StartUp-b4cf233ddcfa434499d3a0fa920615ca -parent 11164 -events -wadVer1v5 -UseProxyServer -XStoreAccounts WadAccount#true#devstoreaccount1#Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==#http://127.0.0.1:10002#http://127.0.0.1:10001#http://127.0.0.1:10000.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Found a DiagnosticsPlugin.exe. WadArguments: "C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WebRole1\plugins\Diagnostics\DiagnosticsPlugin.exe" DiagnosticPlugin-ShutdownEvent DiagnosticPlugin-TotalShutdownEvent -wadVer1v5.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Loading config file: C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Config file to read: C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Found a running wad2 MA not sharing the same local directory
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:52:52 AM] Found a DiagnosticsPlugin.exe. WadArguments: "C:\Users\Kensei\Documents\Visual Studio 2015\Projects\AzureCloudService10\AzureCloudService10\csx\Debug\roles\WebRole1\plugins\Diagnostics\DiagnosticsPlugin.exe" DiagnosticPlugin-ShutdownEvent DiagnosticPlugin-TotalShutdownEvent -wadVer1v5.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:53:52 AM] Forcefully terminated DiagnosticsPlugin.exe process with pid 11164
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:53:52 AM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:53:52 AM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:53:52 AM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:55:02 AM] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 4:55:02 AM] DiagnosticPlugin exited with code 0

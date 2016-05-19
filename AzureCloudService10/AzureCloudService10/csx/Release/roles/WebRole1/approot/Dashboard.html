@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+  
+ <input type="submit" value="Stop Crawling" onclick="stopCrawl();" />
+ <input type="submit" value="Start Crawling" onclick="startCrawl();" />
+ <input type="submit" value="Clear Index" onclick="clearIndex();" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function testJson() {
+            setInterval(function () {
+                jsonDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/GetPageTitle",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var jsonDiv = document.getElementById("jsonDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            jsonDiv.appendChild(temp);
+                        });
+                    }
+                });
+            }, 3000);
+        });
+    </script>
+
+    <script>
+        function getQuery() {
+                queryDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/urlTable",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var queryDiv = document.getElementById("queryDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            queryDiv.appendChild(temp);
+
+                        });
+                    }
+                });
+        }
+    </script>
+
+    <script>
+        function stopCrawl() {
+            $.ajax({
+                type: "POST",
+                url: "Admin.asmx/StopCrawling",
+                data: JSON.stringify({}),
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (word) {                                       
+                }
+            });
+            }
+    </script>
+
+    <script>
+        function startCrawl() {
+            $.ajax({
+                type: "POST",
+                url: "Admin.asmx/StartCrawling",
+                data: JSON.stringify({}),
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (word) {
+                }
+            });
+            }
+    </script>
+
+    <script>
+        function clearIndex() {
+            $.ajax({
+                type: "POST",
+                url: "Admin.asmx/ClearIndex",
+                data: JSON.stringify({}),
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (word) {
+                }
+            });
+            }
+    </script>
+    
+    <script>
+        $(document).ready(function checkCPU() {
+            setInterval(function () {
+                cpuDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/getCurrentCpuUsage",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var cpuDiv = document.getElementById("cpuDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            cpuDiv.appendChild(temp);
+                        });
+                    }
+                });
+            }, 3000);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function checkRAM() {
+            setInterval(function () {
+                ramDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/getAvailableRAM",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var ramDiv = document.getElementById("ramDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            ramDiv.appendChild(temp);
+                        });
+                    }
+                });
+            }, 3000);
+        });
+
+    </script>
+    <script>
+        $(document).ready(function getQueueSize() {
+            setInterval(function () {
+                queueDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/GetQueueSize",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var queueDiv = document.getElementById("queueDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            queueDiv.appendChild(temp);
+                        });
+                    }
+                });
+            }, 3000);
+            });
+    </script>
+
+    <script>
+        $(document).ready(function getIndexSize() {
+            setInterval(function () {
+                indexDiv.innerHTML = "";
+                $.ajax({
+                    type: "POST",
+                    url: "Admin.asmx/GetIndexSize",
+                    data: JSON.stringify({}),
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+
+                    success: function (word) {
+                        var data = JSON.parse(word.d);
+                        var indexDiv = document.getElementById("indexDiv");
+                        $.each(data, function (index, element) {
+                            var temp = document.createElement("div");
+                            temp.innerHTML = element;
+                            indexDiv.appendChild(temp);
+                        });
+                    }
+                });
+            }, 3000);
+        });
+    </script><br />
+    Query:<input type="text" id="input" onkeyup="getQuery();" />
+    <div id="queryDiv"></div>
+    Links:<div id="jsonDiv"></div>
+    Queues:<div id="queueDiv"> </div>
+    Index:<div id="indexDiv"> </div>
+    CPU:<div id="cpuDiv"></div>
+    RAM:<div id="ramDiv"> </div>
+</body>
+</html>
